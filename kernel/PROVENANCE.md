@@ -10,7 +10,7 @@ the Shen-Odin lane.
 - Release SHA-256: `900eedef44f440af78f9395ed06e689ce1604546fc309f5bc7c8bc84cc651920`
 - Kernel version: `43.1`
 
-The 23 release KLambda files, the 56 root canonical tests, and the 17
+The 24 release KLambda files, the 56 root canonical tests, and the 17
 extension tests
 were copied from the verified ShenOSKernel-43.1 source tree and compared with:
 
@@ -19,7 +19,6 @@ export SHEN_KERNEL_43_1=/path/to/ShenOSKernel-43.1
 diff -rq "$SHEN_KERNEL_43_1/tests" kernel/tests
 for f in "$SHEN_KERNEL_43_1/klambda"/*.kl; do
   b=${f##*/}
-  test "$b" = compiler.kl && continue
   cmp -s "$f" "kernel/klambda/$b" || exit 1
 done
 ```

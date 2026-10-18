@@ -10,7 +10,7 @@ the Shen-Odin lane.
 - Release SHA-256: `900eedef44f440af78f9395ed06e689ce1604546fc309f5bc7c8bc84cc651920`
 - Kernel version: `43.1`
 
-The 24 release KLambda files, the 56 root canonical tests, and the 17
+The 23 release KLambda files, the 56 root canonical tests, and the 17
 extension tests
 were copied from the verified ShenOSKernel-43.1 source tree and compared with:
 
@@ -22,6 +22,10 @@ for f in "$SHEN_KERNEL_43_1/klambda"/*.kl; do
   cmp -s "$f" "kernel/klambda/$b" || exit 1
 done
 ```
+
+The CL-specific `compiler.kl` is not part of the 43.1 release and is excluded
+from this fixture. Historical backend/compiler artifacts belong to earlier
+port work and are not part of the Odin source boundary.
 
 The Odin runtime gate remains UNKNOWN because this repository has no evaluator,
 launcher, or canonical suite runner yet.

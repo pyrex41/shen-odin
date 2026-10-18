@@ -13,7 +13,7 @@ boot the kernel and execute the full suite.
 
 ## Kernel fixture
 
-The 24 official `.kl` files are under [`kernel/klambda`](kernel/klambda).
+The 23 official `.kl` files are under [`kernel/klambda`](kernel/klambda).
 The 56 root canonical test files and 17 extension test files are under
 [`kernel/tests`](kernel/tests). Their
 provenance, release checksum, and exact comparison command are recorded in
